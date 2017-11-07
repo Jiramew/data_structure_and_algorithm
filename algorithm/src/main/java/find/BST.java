@@ -44,6 +44,10 @@ public class BST<Key extends Comparable<Key>, Value> {
         root = delete(root, key);
     }
 
+    public void print() {
+        print(root);
+    }
+
     private int size(Node x) {
         if (x == null) return 0;
         else return x.N;
@@ -105,6 +109,14 @@ public class BST<Key extends Comparable<Key>, Value> {
         return x;
     }
 
+    private void print(Node x) {
+        if (x == null) return;
+        print(x.left);
+        System.out.println(x.key);
+        print(x.right);
+
+    }
+
     public static void main(String[] args) {
         BST<String, Integer> bs = new BST<String, Integer>();
         bs.put("o", 1);
@@ -122,8 +134,8 @@ public class BST<Key extends Comparable<Key>, Value> {
         bs.put("s", 3);
         bs.put("v", 3);
         bs.put("z", 3);
-
-        bs.delete("u");
+        bs.print();
+        //bs.delete("u");
 
         System.out.println(bs.min());
         System.out.println(bs.max());
