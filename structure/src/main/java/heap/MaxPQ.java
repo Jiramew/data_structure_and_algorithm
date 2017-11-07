@@ -97,7 +97,7 @@ public class MaxPQ<Key extends Comparable<Key>> {
 //        pq.show();
 
         Integer[] a = new Integer[10];
-        a[0] = 1;
+        a[0] = 2;
         a[1] = 9;
         a[2] = 15;
         a[3] = 11;
